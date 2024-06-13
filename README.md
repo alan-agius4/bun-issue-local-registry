@@ -1,9 +1,12 @@
+When using `bun install` on a local registry (verdaccio) some packages are not being downloaded/extracted correctly. This however is not the case when using another package manager. 
+
+```
 $ bun install
 $ bun run start
 
 $ NPM_CONFIG_REGISTRY=http://localhost:4444 bun install --no-save @schematics/angular
 $ tree node_modules/@schematics/angular -L 1
-```
+
 node_modules/@schematics/angular
 ├── application
 ├── app-shell
@@ -12,12 +15,11 @@ node_modules/@schematics/angular
 └── README.md
 
 4 directories, 2 files
-```
 
 
 $ NPM_CONFIG_REGISTRY=http://localhost:4444 npm install --no-save @schematics/angular
-```
-tree node_modules/@schematics/angular -L 1
+$ tree node_modules/@schematics/angular -L 1
+
 node_modules/@schematics/angular
 ├── application
 ├── app-shell
