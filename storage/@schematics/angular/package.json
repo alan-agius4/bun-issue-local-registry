@@ -1,0 +1,93 @@
+{
+	"name": "@schematics/angular",
+	"versions": {
+		"18.1.0-next.1": {
+			"name": "@schematics/angular",
+			"version": "18.1.0-next.1",
+			"description": "Schematics specific to Angular",
+			"homepage": "https://github.com/angular/angular-cli",
+			"keywords": [
+				"Angular CLI",
+				"Angular DevKit",
+				"angular",
+				"blueprints",
+				"code generation",
+				"devkit",
+				"schematics",
+				"sdk"
+			],
+			"exports": {
+				"./package.json": "./package.json",
+				"./utility": "./utility/index.js",
+				"./utility/*": "./utility/*.js",
+				"./migrations/migration-collection.json": "./migrations/migration-collection.json",
+				"./*": "./*.js"
+			},
+			"schematics": "./collection.json",
+			"dependencies": {
+				"@angular-devkit/core": "18.1.0-next.1",
+				"@angular-devkit/schematics": "18.1.0-next.1",
+				"jsonc-parser": "3.2.1"
+			},
+			"packageManager": "yarn@4.2.2",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/angular/angular-cli.git"
+			},
+			"engines": {
+				"node": "^18.19.1 || ^20.11.1 || >=22.0.0",
+				"npm": "^6.11.0 || ^7.5.6 || >=8.0.0",
+				"yarn": ">= 1.13.0"
+			},
+			"author": {
+				"name": "Angular Authors"
+			},
+			"license": "MIT",
+			"bugs": {
+				"url": "https://github.com/angular/angular-cli/issues"
+			},
+			"dependenciesMeta": {
+				"esbuild": {
+					"built": true
+				},
+				"puppeteer": {
+					"built": true
+				}
+			},
+			"_id": "@schematics/angular@18.1.0-next.1",
+			"readmeFilename": "README.md",
+			"_integrity": "sha512-8TFntjcSSFVjLrWh3HI/2DaG6vYdbeIoVzlSX+ElP7MzBhnYz/hfLqlQaPz/HtJhVd+XKfUV7IKGWXwvJIo/TA==",
+			"_resolved": "/usr/local/google/home/alanagius/.cache/bazel/_bazel_alanagius/2fa837e4c5ce941f68b762e5f8e7dc4d/execroot/angular_cli/bazel-out/k8-fastbuild/bin/tests/legacy-cli/e2e_node22.sh.runfiles/angular_cli/packages/schematics/angular/npm_package_archive.tgz",
+			"_from": "file:/usr/local/google/home/alanagius/.cache/bazel/_bazel_alanagius/2fa837e4c5ce941f68b762e5f8e7dc4d/execroot/angular_cli/bazel-out/k8-fastbuild/bin/tests/legacy-cli/e2e_node22.sh.runfiles/angular_cli/packages/schematics/angular/npm_package_archive.tgz",
+			"_nodeVersion": "22.0.0",
+			"_npmVersion": "10.8.1",
+			"dist": {
+				"integrity": "sha512-8TFntjcSSFVjLrWh3HI/2DaG6vYdbeIoVzlSX+ElP7MzBhnYz/hfLqlQaPz/HtJhVd+XKfUV7IKGWXwvJIo/TA==",
+				"shasum": "f5e36bbc6e51dd6f10f15b11d4387694d69e66a0",
+				"tarball": "http://localhost:39169/@schematics/angular/-/@schematics/angular-18.1.0-next.1.tgz"
+			},
+			"contributors": []
+		}
+	},
+	"time": {
+		"modified": "2024-06-13T09:04:47.878Z",
+		"created": "2024-06-13T09:04:47.878Z",
+		"18.1.0-next.1": "2024-06-13T09:04:47.878Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "18.1.0-next.1",
+		"next": "18.1.0-next.1"
+	},
+	"_uplinks": {},
+	"_distfiles": {},
+	"_attachments": {
+		"angular-18.1.0-next.1.tgz": {
+			"shasum": "f5e36bbc6e51dd6f10f15b11d4387694d69e66a0",
+			"version": "18.1.0-next.1"
+		}
+	},
+	"_rev": "3-146c28d38f8c9904",
+	"_id": "@schematics/angular",
+	"readme": "# @schematics/angular\n\nThis package contains a collection of [schematics](/packages/angular_devkit/schematics/README.md)\nfor generating an Angular application.\n\n## Schematics\n\n| Name           | Description                                                                                           |\n| -------------- | ----------------------------------------------------------------------------------------------------- |\n| app-shell      | Generates an app shell for running a server-side version of an app                                    |\n| application    | Generates a new basic app definition in the \"projects\" subfolder of the workspace                     |\n| class          | Creates a new, generic class definition in the given project                                          |\n| component      | Creates a new, generic component definition in the given project                                      |\n| directive      | Creates a new, generic directive definition in the given project                                      |\n| enum           | Generates a new, generic enum definition in the given project                                         |\n| guard          | Generates a new, generic route guard definition in the given project                                  |\n| interceptor    | Creates a new, generic interceptor definition in the given project                                    |\n| interface      | Creates a new, generic interface definition in the given project                                      |\n| library        | Creates a new, generic library project in the current workspace                                       |\n| module         | Creates a new, generic NgModule definition in the given project                                       |\n| ng-new         | Creates a new project by combining the workspace and application schematics                           |\n| pipe           | Creates a new, generic pipe definition in the given project                                           |\n| resolver       | Creates a new, generic resolver definition in the given project                                       |\n| service        | Creates a new, generic service definition in the given project                                        |\n| service-worker | Pass this schematic to the \"run\" command to create a service worker                                   |\n| web-worker     | Creates a new, generic web worker definition in the given project                                     |\n| workspace      | Initializes an empty workspace and adds the necessary dependencies required by an Angular application |\n\n## Disclaimer\n\nWhile the schematics when executed via the Angular CLI and their associated options are considered stable, the programmatic APIs are not considered officially supported and are not subject to the breaking change guarantees of SemVer.\n"
+}

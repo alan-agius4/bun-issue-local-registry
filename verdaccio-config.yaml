@@ -1,0 +1,23 @@
+storage: ./storage
+
+listen: localhost:4444
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+    cache: false
+packages:
+  '@schematics/angular':
+    access: $all
+    publish: $all
+
+  '**':
+    access: $all
+    proxy: npmjs
+
+log:
+  type: stdout
+  format: pretty
+  level: warn
+# https://github.com/verdaccio/verdaccio/issues/301
+server:
+  keepAliveTimeout: 0

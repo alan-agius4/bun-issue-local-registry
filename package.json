@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "verdaccio -c verdaccio-config.yaml"
+  },
+  "dependencies": {
+    "verdaccio": "^5.31.1"
+  }
+}
